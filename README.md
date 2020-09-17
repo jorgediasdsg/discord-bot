@@ -12,15 +12,15 @@
 <p>This application connects to the Discord API and bot run functions: </p>
 <p>
 
-# Connect to the discord server and change "Playing" name.
+#### Connect to the discord server and change "Playing" name.
 
-# Response ping time
+#### Response ping time
  !ping
 
-# Build new image with avatar user, mask and background
+#### Build new image with avatar user, mask and background
   Use jimp to make this picture welcome.
 
-# Send image Welcome to the new members.
+#### Send image Welcome to the new members.
   Connect new member em the server to bot send image welcome in channel.
 
 </p>
