@@ -12,6 +12,9 @@
 
 The goal is simple, just a discord bot consume the api, use a node to connect to the discord server, respond to a ping command in the chat with the response time, and when someone enters the server create an image with some layers as a background mask and a avatar, and then put the message 'welcome', after creating the image send the chat message to the new member.
 
+Resume:
+Training node, express and discord.js.
+
 </p>
 
 <h1 id="technologies">:rocket: Technologies</h1>
