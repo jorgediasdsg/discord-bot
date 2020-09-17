@@ -1,6 +1,6 @@
 # System Files
 config.json
-src/welcome.png
+*welcome.png
 # Logs
 logs
 *.log
