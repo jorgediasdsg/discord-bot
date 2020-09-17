@@ -1,5 +1,7 @@
-# Logs
+# System Files
 config.json
+*welcome*
+# Logs
 logs
 *.log
 npm-debug.log*
