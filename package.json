@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jorgediasdsg/discord-bot#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "jimp": "^0.16.1"
   }
 }
