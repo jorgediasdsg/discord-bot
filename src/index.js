@@ -10,17 +10,17 @@ const config = require("../config.json")
 
 
 client.on("ready", () => {
-  console.log(`O bot foi iniciado, com ${client.users.cache.size} usuários e em ${client.guilds.cache.size} servidores.`);
-  client.user.setActivity(`xadrez em ${client.guilds.cache.size} servidores!`, { type: 'PLAYING' });(`Eu estou em ${client.guilds.cache.size} servidores`);
+  console.log(`The bot was started, with ${client.users.cache.size} users and connnected at ${client.guilds.cache.size} servers.`);
+  client.user.setActivity(`Chezz at ${client.guilds.cache.size} servers!`, { type: 'PLAYING' });(`I am at ${client.guilds.cache.size} servers`);
 });
 
 client.on("guildCreate", guild => {
-    console.log(`O bot entrou no servidor: ${guild.name} (ID do servidor: ${guild.id}). Membros: ${guild.memberCount} membros!`);
+    console.log(`The bot enter in this server: ${guild.name} (ID server: ${guild.id}). ${guild.memberCount} members`);
     client.user.setActivity(`Estou em ${client.guilds.cache.size} servidores.`);
 });
 
 client.on("guildDelete", guild => {
-    console.log(`O bot foi removido do servidor: ${guild.name} (ID do servidor: ${guild.id})`);
+    console.log(`The bot was removed in the server: ${guild.name} (ID server: ${guild.id})`);
     client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
 });
 
@@ -40,29 +40,30 @@ client.on("message", async message => {
 });
 
 client.on("guildMemberAdd", async member => {
-    let channel = client.channels.cache.get("743537137093181614")
+    let channel = client.channels.cache.get(config.channel_welcome)
     let font = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK)
-    let mask = await Jimp.read('../mask.png')
-    // let avatar = await Jimp.read('./img/Goofy.png')
-    let background = await Jimp.read('../background.png')
-    Jimp.read(member.user.displayAvatarURL())
-    .then(avatar => {
+    let mask = await Jimp.read("./img/mask.png")
+    let background = await Jimp.read('./img/background.png')
 
+    Jimp.read(member.user.displayAvatarURL().replace('webp','png'))
+    .then(avatar => {
         avatar.resize(130, 130);
         mask.resize(130, 130);
 
         avatar.mask(mask)
 
         background.print(font, 170, 175, member.user.username)
-        background.composite(avatar, 40, 90).write('welcome.png');
-        channel.send(``, { files: ["welcome.png"] } )
-        console.log("Image was send to discord.")
+        background.composite(avatar, 40, 90).write('./img/welcome.png');
+        channel.send(``, { files: ["./img/welcome.png"] } )
+        console.log(`${member.user.username} enter in the server and image was send to discord`)
     })
     .catch(err => {
         console.log("Channel: "+channel+"/ font: "+font+" /mask:"+mask+" /back"+background)
-        console.log("AvatarURL:"+member.user.displayAvatarURL)
+        console.log("AvatarURL:"+member.user.displayAvatarURL())
+        console.log(avatar)
         console.log("Username:"+member.user.username)
         console.log("Error loading image!")
+        console.log(err)
     });
 })
 
