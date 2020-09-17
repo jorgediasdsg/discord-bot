@@ -9,19 +9,8 @@
 </p>
 
 <h1 id="objective">:bulb: Objective</h1>
-<p>This application connects to the Discord API and bot run functions: </p>
-<p>
 
-#### Connect to the discord server and change "Playing" name.
-
-#### Response ping time
- !ping
-
-#### Build new image with avatar user, mask and background
-  Use jimp to make this picture welcome.
-
-#### Send image Welcome to the new members.
-  Connect new member em the server to bot send image welcome in channel.
+The goal is simple, just a discord bot consume the api, use a node to connect to the discord server, respond to a ping command in the chat with the response time, and when someone enters the server create an image with some layers as a background mask and a avatar, and then put the message 'welcome', after creating the image send the chat message to the new member.
 
 </p>
 
