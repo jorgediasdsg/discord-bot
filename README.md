@@ -5,7 +5,7 @@
 <p align="center">
  <a href="#objective">Objective</a> •
  <a href="#technologies">Technologies</a> •
- <a href="#how-to-run">How to run the application</a> •
+ <a href="#how-to-run">How to run the application</a>
 </p>
 
 <h1 id="objective">:bulb: Objective</h1>
