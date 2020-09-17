@@ -52,7 +52,7 @@
    
 <h4>You will need copy room chat channel id to config.json</h4>
 
-<p>To get your Server ID right click on the server icon on the left hand sidebar then click on “Copy ID” then paste it into your Discord or on a text editor.</p>
+<p>To get your Server ID right click on the server icon on the left hand sidebar then click on “Copy ID” then paste it into channel_welcome at config.json file.</p>
 
 
 ```bash
