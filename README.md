@@ -65,4 +65,4 @@ node src/index.js
 ```
 <hr>
 
-@jorgediasdsg 2020
+@jorgediasdsg 2020 :rocket:
